@@ -5,6 +5,7 @@ import ActivitiesItems from '../Activities-Items/ActivitiesItems';
 const Activities = () => {
     const [items,setItems] = useState([])
     const [times,setTimes] = useState("")
+
     
     useEffect(()=>{
         fetch('muscle.json')
@@ -14,6 +15,7 @@ const Activities = () => {
     
     const addTime= (timeRequired)=>{
         setTimes(timeRequired)
+        
     }
     console.log(times);
     return (
@@ -52,8 +54,8 @@ const Activities = () => {
                     </div>
                     <h5 className='mt-3 text-center'>Exercise Details</h5>
                     <div>
-                    <p className='bg-danger  rounded-5 text-center'>Exercise Time: <h6></h6>s</p>
-                    <p className='bg-danger rounded-5 text-center'>Break Time:<h6></h6>s </p>
+                    <p className='bg-danger  rounded-5 text-center'>Exercise Time: <h6></h6></p>
+                    <p className='bg-danger rounded-5 text-center'>Break Time:<h6></h6></p>
                     </div>
                     </div>
                     <div className='mt-3 text-center'>
@@ -61,6 +63,7 @@ const Activities = () => {
                     </div>
                 </div>
             </div>
+        
        </div>
         
     );

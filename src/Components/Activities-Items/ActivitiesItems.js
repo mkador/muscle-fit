@@ -4,6 +4,7 @@ import React from 'react';
 const ActivitiesItems = ({item,addTime}) => {
     
     const {id,name,age,picture,about,timeRequired} = item;
+
     return (
         <div className='col-12 col-md-4 mt-5'>
             
