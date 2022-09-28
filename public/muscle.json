@@ -1,0 +1,44 @@
+[
+    { "id":1,
+      "picture": "./image/picture-1.jpg",
+      "name": "Dumbbell Exercise",
+      "about": "Aliqua laboris adipisicing nulla qui ipsum culpa sint aute qui. Qui exercitation nisi dolore voluptate voluptate. Elit sunt non cillum\r\n",
+      "age": "25-30" ,
+      "timeRequired": 30
+    },
+    { "id":2,
+      "picture": "./image/picture-2.jpg",
+      "name": "Weight Lifting",
+      "about": "Aliqua laboris adipisicing nulla qui ipsum culpa sint aute qui. Qui exercitation nisi dolore voluptate voluptate. Elit sunt non cillum\r\n",
+      "age": "20-30",
+      "timeRequired": 20
+    },
+    { "id":3,
+      "picture": "./image/picture-3.jpg",
+      "name": "Cable crossover",
+      "about": "Aliqua laboris adipisicing nulla qui ipsum culpa sint aute qui. Qui exercitation nisi dolore voluptate voluptate. Elit sunt non cillum\r\n",
+      "age": "25-30",
+      "timeRequired":25
+    },
+    { "id":4,
+      "picture": "./image/picture-4.jpg",
+      "name": "Squats",
+      "about": "Aliqua laboris adipisicing nulla qui ipsum culpa sint aute qui. Qui exercitation nisi dolore voluptate voluptate. Elit sunt non cillum\r\n",
+      "age": "25-35",
+      "timeRequired": 35
+    },
+    { "id":5,
+      "picture": "./image/picture-5.jpg",
+      "name": "Chest Flye",
+      "about": "Aliqua laboris adipisicing nulla qui ipsum culpa sint aute qui. Qui exercitation nisi dolore voluptate voluptate. Elit sunt non cillum\r\n",
+      "age": "25-30",
+      "timeRequired": 30
+    },
+    { "id":6,
+      "picture": "./image/picture-6.jpg",
+      "name": "Dumbbell rows",
+      "about": "Aliqua laboris adipisicing nulla qui ipsum culpa sint aute qui. Qui exercitation nisi dolore voluptate voluptate. Elit sunt non cillum\r\n",
+      "age": "22-30",
+      "timeRequired": 15
+    }
+  ]
