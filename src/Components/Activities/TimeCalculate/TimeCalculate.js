@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const notify = () => {
-    toast.success('Done!! The Process,Thank You', {
+    toast.success('Done!!! Thank You :)', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
