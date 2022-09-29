@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
-import { addToDb,getStoredTimes } from '../../../utilities/fakedb';
+import React, { useEffect, useState } from 'react';
+import { addToDbBreakTimes,getStoredTimes } from '../../../utilities/fakedb';
 
 const TimeCalculate = ({exerciseTimes}) => {
-    
+    const [time,setTime] = useState(0);
+    const [storedBreakTimes,setStoredBreakTimes] = useState(0);
     const breakTimes = [10,20,30,40,50];
+    
     const addBreakTimes = (breakTime)=>{
-        addToDb(breakTime,'break-times')
+        addToDbBreakTimes(breakTime,'break-times');
+        setTime(breakTime);
     }
+    useEffect(()=>{
+       const getBreakTimes = getStoredTimes('break-times')  ;
+       setStoredBreakTimes(getBreakTimes);
+    },[time])
+
     return (
         <div>
              <div className='row'>
@@ -33,7 +41,7 @@ const TimeCalculate = ({exerciseTimes}) => {
                     <h5 className='mt-3 text-center'>Exercise Details</h5>
                     <div>
                     <p className='bg-danger  rounded-5 text-center'>Exercise Time: {exerciseTimes} </p>
-                    <p className='bg-danger rounded-5 text-center'>Break Time: </p>
+                    <p className='bg-danger rounded-5 text-center'>Break Time: {storedBreakTimes} </p>
                     </div>
                     <div className='mt-3 text-center'>
                     <button className='btn btn-success'>Activity Completed</button>

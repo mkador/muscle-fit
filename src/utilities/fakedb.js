@@ -1,4 +1,18 @@
 // use local storage to manage cart data
+const addToDbBreakTimes = (times,key) =>{
+    let breakTimes= 0;
+
+    //get the shopping cart from local storage
+    const storedTimes = localStorage.getItem(key);
+    if(storedTimes){
+        breakTimes = JSON.parse(storedTimes);
+        breakTimes =times; 
+    }
+    else{
+        breakTimes =times;
+    }
+    localStorage.setItem(key, JSON.stringify(breakTimes));
+}
 const addToDb = (times,key) =>{
     let exerciseTimes= 0;
 
@@ -11,16 +25,6 @@ const addToDb = (times,key) =>{
     else{
         exerciseTimes +=times;
     }
-
-    // // add quantity
-    // const times = exerciseTimes[id];
-    // if(times){
-    //     const newTimes = times + 1;
-    //     exerciseTimes[id] = newTimes;
-    // }
-    // else{
-    //     exerciseTimes[id] = 1;
-    // }
     localStorage.setItem(key, JSON.stringify(exerciseTimes));
 }
 
@@ -35,25 +39,10 @@ const getStoredTimes =(key)=>{
     return exerciseTimes;
 }
 
-// const removeFromDb = id =>{
-//     const storedCart = localStorage.getItem('shopping-cart');
-//     if(storedCart){
-//         const shoppingCart = JSON.parse(storedCart);
-//         if(id in shoppingCart){
-//             delete shoppingCart[id];
-//             localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
-//         }
-//     }
-// }
-
-// const deleteShoppingCart = () =>{
-//     localStorage.removeItem('shopping-cart');
-// }
-
 export {
     addToDb, 
     getStoredTimes,
-    // removeFromDb,
-    // deleteShoppingCart,
+    addToDbBreakTimes
+    
     
 }
