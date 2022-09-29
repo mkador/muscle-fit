@@ -19,6 +19,7 @@ const Activities = () => {
     useEffect(()=>{
         const storedTimes = getStoredTimes('exercise-times');
         setExerciseTimes(storedTimes);
+        setTimes(storedTimes);
     },[times])
       
     const addTime= (timeRequired)=>{
@@ -30,7 +31,7 @@ const Activities = () => {
     return (
         <div>
            <div className="row">
-                <div className="col-8">
+                <div className=" col-12 col-md-7 col-lg-8 ">
                    <div className='row'>
                    {   
                         items.map(item=> <ActivitiesItems key={item?.id}item={item} addTime={addTime}/>)
@@ -38,7 +39,7 @@ const Activities = () => {
                    </div>
                 </div>
 
-                <div className=" mt-4 col-4 pr-3 pl-3">
+                <div className=" mt-4 col-12 col-md-5  col-lg-4">
                    <TimeCalculate exerciseTimes={exerciseTimes}></TimeCalculate>
                 </div>
             </div>

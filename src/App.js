@@ -7,7 +7,7 @@ import Activities from './Components/Activities/Activities';
 
 function App() {
   return (
-    <div>
+    <div className='container'>
      <Header></Header>
      <Activities></Activities>
     </div>
