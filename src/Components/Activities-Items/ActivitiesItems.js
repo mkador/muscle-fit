@@ -14,8 +14,8 @@ const ActivitiesItems = ({item,addTime}) => {
             <div className="card-body">
             <h5 className="card-title">{name}</h5>
             <p className="card-text">{about}</p>
-            <p>Age: {age}</p>
-            <p>Time Required: {timeRequired}</p>
+            <p>Age: {age} yrs</p>
+            <p>Time Required: {timeRequired} Second</p>
             <button onClick={()=>addTime(timeRequired)} className="btn btn-primary">Added Items</button>
            </div>
           </div>
