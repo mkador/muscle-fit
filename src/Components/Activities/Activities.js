@@ -6,7 +6,7 @@ import {addToDb,getStoredTimes} from '../../utilities/fakedb';
 
 const Activities = () => {
     const [items,setItems] = useState([])
-    const [times,setTimes] = useState("")
+    const [times,setTimes] = useState(0)
     const [exerciseTimes,setExerciseTimes] = useState(0)
 
     
@@ -17,13 +17,13 @@ const Activities = () => {
     },[]);
 
     useEffect(()=>{
-        const storedTimes = getStoredTimes();
+        const storedTimes = getStoredTimes('exercise-times');
         setExerciseTimes(storedTimes);
     },[times])
-    console.log(exerciseTimes);    
+      
     const addTime= (timeRequired)=>{
         setTimes(timeRequired);
-        addToDb(timeRequired);
+        addToDb(timeRequired,'exercise-times');
         
     }
     

@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { addToDb,getStoredTimes } from '../../../utilities/fakedb';
 
-const TimeCalculate = (props) => {
+const TimeCalculate = ({exerciseTimes}) => {
     
-    
+    const breakTimes = [10,20,30,40,50];
+    const addBreakTimes = (breakTime)=>{
+        addToDb(breakTime,'break-times')
+    }
     return (
         <div>
              <div className='row'>
@@ -19,17 +23,16 @@ const TimeCalculate = (props) => {
                     <div>
                         <h5 className='mt-3 text-center'>Add a Break</h5>
                         <div className='d-flex justify-content-between align-items-center m-4'>
-                        <button type="button" className="rounded-5 btn btn-outline-danger">10s</button>
-                        <button type="button" className="rounded-5 btn btn-outline-danger">20s</button>
-                        <button type="button" className="rounded-5 btn btn-outline-danger">30s</button>
-                        <button type="button" className="rounded-5 btn btn-outline-danger">40s</button>
-                        <button type="button" className="rounded-5 btn btn-outline-danger">50s</button>
+                        {
+                            breakTimes.map(breakTime=> <button onClick={()=>addBreakTimes(breakTime)} type="button" className="rounded-5 btn btn-outline-danger">{breakTime}</button>)
+                        }
+                        
                         
                         </div>
                     </div>
                     <h5 className='mt-3 text-center'>Exercise Details</h5>
                     <div>
-                    <p className='bg-danger  rounded-5 text-center'>Exercise Time: </p>
+                    <p className='bg-danger  rounded-5 text-center'>Exercise Time: {exerciseTimes} </p>
                     <p className='bg-danger rounded-5 text-center'>Break Time: </p>
                     </div>
                     <div className='mt-3 text-center'>
