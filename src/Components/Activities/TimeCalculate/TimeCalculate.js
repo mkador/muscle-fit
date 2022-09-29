@@ -22,8 +22,8 @@ const TimeCalculate = ({exerciseTimes}) => {
     const breakTimes = ["10 min","20 min","30 min","40 min","50 min"];
     
     const addBreakTimes = (breakTime)=>{
-        addToDbBreakTimes(breakTime,'break-times');
-        setTime(breakTime);
+            addToDbBreakTimes(breakTime,'break-times');
+            setTime(breakTime);
     }
     useEffect(()=>{
        const getBreakTimes = getStoredTimes('break-times')  ;
